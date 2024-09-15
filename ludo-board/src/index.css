@@ -1,0 +1,137 @@
+:root {
+  --primary-color: #4caf50;
+  --secondary-color: #646cff;
+  --button-bg-color: #ff6f61;
+  --button-hover-color: #ff8f7b;
+  --text-color: #fff;
+  --border-radius: 8px;
+
+  font-family: 'Inter', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-image: url('https://www.pixelstalk.net/wp-content/uploads/images6/City-Background-HD.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--text-color);
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.7);
+  /* Semi-transparent black for better contrast */
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 500px;
+  color: var(--text-color);
+}
+
+h4 {
+  font-size: 1.8em;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2em;
+  border: 2px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  outline: none;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.8);
+  /* Lighter background for input */
+  color: #000;
+  /* Black text for better readability */
+}
+
+input[type="text"]:focus {
+  border-color: var(--primary-color);
+}
+
+button {
+  background-color: var(--button-bg-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  margin-right: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+li {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Slightly transparent */
+  padding: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--border-radius);
+  color: var(--text-color);
+  /* Ensure text is white */
+}
+
+li span {
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+li button {
+  background-color: var(--secondary-color);
+  padding: 6px 12px;
+  font-size: 0.9em;
+}
+
+li button:hover {
+  background-color: #535bf2;
+}
+
+li span[style] {
+  text-decoration: line-through;
+  color: lightgray;
+  /* Lighter color for completed tasks */
+}
+
+hr {
+  margin: 40px 0;
+  border: 1px solid var(--primary-color);
+}
+
+@media (max-width: 600px) {
+  input[type="text"] {
+    font-size: 1em;
+  }
+
+  button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}
